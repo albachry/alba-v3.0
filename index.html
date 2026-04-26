@@ -304,6 +304,276 @@ window.addEventListener('scroll',()=>{
 </script>
 </body>
 </html>
+.logo-3d svg{width:min(680px,88vw);height:auto;filter:drop-shadow(0 0 40px rgba(245,200,66,.35)) drop-shadow(0 0 80px rgba(245,200,66,.15)) drop-shadow(0 20px 40px rgba(0,0,0,.9))}
+
+.hero-badge{display:inline-block;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold2);border:1px solid rgba(245,200,66,.25);padding:.35rem 1.2rem;margin-bottom:2rem;animation:fadeDown .8s ease both}
+.hero-subtitle{font-family:'Cinzel',serif;font-size:clamp(.75rem,1.8vw,1rem);color:rgba(245,240,232,.45);letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;animation:fadeUp .8s .3s ease both}
+.hero-desc{font-size:clamp(.85rem,1.5vw,.98rem);color:rgba(245,240,232,.38);max-width:540px;margin:1rem auto 2.8rem;line-height:1.9;font-weight:300;animation:fadeUp .8s .45s ease both}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s .6s ease both}
+.btn-primary{display:inline-flex;align-items:center;gap:.6rem;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 2rem;background:linear-gradient(135deg,#F5C842,#D4A017);color:var(--black);text-decoration:none;font-weight:700;transition:all .3s;box-shadow:0 0 30px rgba(245,200,66,.3)}
+.btn-primary:hover{box-shadow:0 0 50px rgba(245,200,66,.5);transform:translateY(-2px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:.6rem;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 2rem;border:1px solid rgba(245,200,66,.35);color:var(--gold);background:transparent;text-decoration:none;transition:all .3s}
+.btn-secondary:hover{border-color:var(--gold);background:rgba(245,200,66,.05);transform:translateY(-2px)}
+
+.scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:fadeUp .8s .9s ease both}
+.scroll-ind span{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.3em;color:var(--grey);text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(var(--gold2),transparent);animation:scrollLine 1.8s ease-in-out infinite}
+@keyframes scrollLine{0%{opacity:0;transform:scaleY(0);transform-origin:top}50%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(0);transform-origin:bottom}}
+
+.marquee-wrap{border-top:1px solid rgba(245,200,66,.08);border-bottom:1px solid rgba(245,200,66,.08);padding:.75rem 0;overflow:hidden;background:rgba(245,200,66,.015)}
+.marquee{display:flex;animation:marquee 30s linear infinite;white-space:nowrap}
+.marquee-item{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.25em;color:var(--gold3);text-transform:uppercase;padding:0 2rem}
+.marquee-dot{color:var(--gold);margin:0 .5rem}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.section{padding:6rem 2rem;max-width:1080px;margin:0 auto}
+.sec-label{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.35em;color:var(--gold2);text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:1rem}
+.sec-label::after{content:'';flex:1;height:1px;background:linear-gradient(var(--gold3),transparent);max-width:80px}
+.sec-title{font-family:'Cinzel Decorative',serif;font-size:clamp(1.5rem,4vw,2.6rem);color:var(--white);line-height:1.2;margin-bottom:1rem}
+.sec-title span{color:var(--gold)}
+.sec-desc{color:rgba(245,240,232,.38);font-size:.9rem;line-height:1.8;max-width:520px;margin-bottom:3rem}
+
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.feature-card{background:var(--black2);border:1px solid rgba(245,200,66,.07);padding:2rem;position:relative;overflow:hidden;transition:all .4s}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);transform:scaleX(0);transition:transform .4s}
+.feature-card:hover{border-color:rgba(245,200,66,.2);transform:translateY(-4px)}
+.feature-card:hover::before{transform:scaleX(1)}
+.feature-icon{font-size:2rem;margin-bottom:1.2rem;display:block}
+.feature-num{position:absolute;top:1.5rem;right:1.5rem;font-family:'Cinzel Decorative',serif;font-size:2.5rem;color:rgba(245,200,66,.04);font-weight:900;line-height:1}
+.feature-name{font-family:'Cinzel',serif;font-size:.9rem;color:var(--gold);letter-spacing:.05em;margin-bottom:.5rem}
+.feature-desc{font-size:.83rem;color:rgba(245,240,232,.38);line-height:1.7}
+.feature-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.ftag{font-size:.58rem;letter-spacing:.15em;padding:.25rem .6rem;border:1px solid rgba(245,200,66,.15);color:var(--gold3);font-family:'Cinzel',serif;text-transform:uppercase}
+
+.how-section{padding:5rem 2rem;background:var(--black2);border-top:1px solid rgba(245,200,66,.06);border-bottom:1px solid rgba(245,200,66,.06)}
+.how-inner{max-width:1080px;margin:0 auto}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:3rem;position:relative}
+.steps-grid::before{content:'';position:absolute;top:2.5rem;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold3),var(--gold2),var(--gold3),transparent)}
+.step{text-align:center;padding:1.5rem 1rem}
+.step-num{width:3.2rem;height:3.2rem;border:1px solid var(--gold2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Cinzel Decorative',serif;font-size:.9rem;color:var(--gold);background:var(--black);position:relative;z-index:1;transition:all .3s}
+.step:hover .step-num{background:var(--gold);color:var(--black);box-shadow:0 0 25px rgba(245,200,66,.4)}
+.step-title{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.1em;color:var(--white);margin-bottom:.5rem;text-transform:uppercase}
+.step-desc{font-size:.78rem;color:var(--grey);line-height:1.6}
+
+.stats-section{padding:5rem 2rem;background:var(--black3)}
+.stats-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem;text-align:center}
+.stat-item{padding:1.5rem}
+.stat-num{font-family:'Cinzel Decorative',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--gold);text-shadow:0 0 30px rgba(245,200,66,.3);line-height:1;margin-bottom:.5rem;display:block}
+.stat-label{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--grey)}
+
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem}
+.client-card{background:var(--black2);border:1px solid rgba(245,200,66,.07);padding:1.8rem;transition:all .4s;position:relative;overflow:hidden}
+.client-card:hover{border-color:rgba(245,200,66,.25);transform:translateY(-3px)}
+.client-icon{font-size:1.8rem;margin-bottom:.8rem;display:block}
+.client-type{font-family:'Cinzel',serif;font-size:.78rem;color:var(--gold);letter-spacing:.08em;margin-bottom:.4rem}
+.client-desc{font-size:.78rem;color:rgba(245,240,232,.35);line-height:1.6}
+
+.cta-section{padding:7rem 2rem;text-align:center;position:relative;overflow:hidden;background:var(--black2)}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(245,200,66,.05) 0%,transparent 70%)}
+.cta-title{font-family:'Cinzel Decorative',serif;font-size:clamp(1.6rem,4vw,2.8rem);color:var(--white);margin-bottom:1rem}
+.cta-title span{color:var(--gold)}
+.cta-desc{color:rgba(245,240,232,.38);max-width:480px;margin:0 auto 2.5rem;line-height:1.8;font-size:.9rem}
+.wa-btn{display:inline-flex;align-items:center;gap:.8rem;font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;padding:1.1rem 2.5rem;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;text-decoration:none;transition:all .3s;box-shadow:0 0 40px rgba(37,211,102,.15)}
+.wa-btn:hover{transform:translateY(-3px);box-shadow:0 0 60px rgba(37,211,102,.35)}
+
+footer{padding:3rem 2rem;border-top:1px solid rgba(245,200,66,.07);text-align:center;background:var(--black)}
+.footer-logo-text{font-family:'Cinzel Decorative',serif;font-size:1.8rem;background:linear-gradient(135deg,#FFF3A0,#F5C842,#D4A017,#8B6914);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:.3em;margin-bottom:.4rem;filter:drop-shadow(0 2px 8px rgba(245,200,66,.2))}
+.footer-sub{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.3em;color:var(--grey);text-transform:uppercase;margin-bottom:1.8rem}
+.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.footer-links a{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.15em;color:var(--grey);text-decoration:none;text-transform:uppercase;transition:color .3s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.72rem;color:rgba(119,119,119,.4)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){.nav-links{display:none}.steps-grid::before{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">ALBA</div>
+  <div class="nav-links">
+    <a href="#fitur">Fitur</a>
+    <a href="#klien">Klien</a>
+    <a href="#cara">Cara Kerja</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+  <a href="https://wa.me/6285XXXXXXXXX" class="nav-cta" target="_blank">Konsultasi Gratis</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">✦ Business Management & Automation System ✦</div>
+
+    <!-- 3D EMBOSS GLOSSY LOGO -->
+    <div class="logo-3d">
+      <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%"   stop-color="#FFFACC"/>
+            <stop offset="12%"  stop-color="#F5E070"/>
+            <stop offset="30%"  stop-color="#F5C842"/>
+            <stop offset="50%"  stop-color="#D4A017"/>
+            <stop offset="65%"  stop-color="#F0D060"/>
+            <stop offset="80%"  stop-color="#B8860B"/>
+            <stop offset="100%" stop-color="#6B4E0A"/>
+          </linearGradient>
+          <linearGradient id="glossGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%"  stop-color="rgba(255,255,255,0.55)"/>
+            <stop offset="42%" stop-color="rgba(255,255,255,0.10)"/>
+            <stop offset="43%" stop-color="rgba(255,255,255,0.0)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0.0)"/>
+          </linearGradient>
+          <linearGradient id="outlineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%"   stop-color="#FFF3A0"/>
+            <stop offset="50%"  stop-color="#D4A017"/>
+            <stop offset="100%" stop-color="#4A2E00"/>
+          </linearGradient>
+          <filter id="glow" x="-10%" y="-20%" width="120%" height="150%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+            <feColorMatrix in="blur" type="matrix" values="1 0.8 0 0 0.2  0.8 0.6 0 0 0.1  0 0 0 0 0  0 0 0 0.5 0" result="goldGlow"/>
+            <feMerge><feMergeNode in="goldGlow"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <clipPath id="glossClip"><rect x="0" y="0" width="700" height="82"/></clipPath>
+        </defs>
+        <!-- Shadow layers for 3D extrude -->
+        <text x="350" y="128" text-anchor="middle" font-family="'Cinzel Decorative',Georgia,serif" font-size="135" font-weight="900" letter-spacing="16" fill="#0A0500" transform="translate(6,8)" opacity="0.9">ALBA</text>
+        <text x="350" y="128" text-anchor="middle" font-family="'Cinzel Decorative',Georgia,serif" font-size="135" font-weight="900" letter-spacing="16" fill="#1A0D00" transform="translate(4,5)" opacity="0.8">ALBA</text>
+        <text x="350" y="128" text-anchor="middle" font-family="'Cinzel Decorative',Georgia,serif" font-size="135" font-weight="900" letter-spacing="16" fill="#2D1A00" transform="translate(2,3)" opacity="0.7">ALBA</text>
+        <!-- Main gold text -->
+        <text x="350" y="128" text-anchor="middle" font-family="'Cinzel Decorative',Georgia,serif" font-size="135" font-weight="900" letter-spacing="16" fill="url(#goldGrad)" filter="url(#glow)">ALBA</text>
+        <!-- Outline -->
+        <text x="350" y="128" text-anchor="middle" font-family="'Cinzel Decorative',Georgia,serif" font-size="135" font-weight="900" letter-spacing="16" fill="none" stroke="url(#outlineGrad)" stroke-width="1.5" opacity="0.6">ALBA</text>
+        <!-- Glossy highlight top half -->
+        <text x="350" y="128" text-anchor="middle" font-family="'Cinzel Decorative',Georgia,serif" font-size="135" font-weight="900" letter-spacing="16" fill="url(#glossGrad)" clip-path="url(#glossClip)" opacity="0.85">ALBA</text>
+        <!-- Top edge bright line -->
+        <text x="350" y="128" text-anchor="middle" font-family="'Cinzel Decorative',Georgia,serif" font-size="135" font-weight="900" letter-spacing="16" fill="none" stroke="rgba(255,252,200,0.35)" stroke-width="0.5" transform="translate(-0.5,-0.8)">ALBA</text>
+      </svg>
+    </div>
+
+    <p class="hero-subtitle">Business Management & Automation System</p>
+    <p class="hero-desc">Satu platform terintegrasi untuk mengelola keuangan, inventory, distribusi, partner network, dan otomasi bisnis UMKM Anda — dari hulu ke hilir.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/6285XXXXXXXXX?text=Halo ALBA, saya ingin demo sistem manajemen bisnis" class="btn-primary" target="_blank">🚀 Minta Demo Gratis</a>
+      <a href="#fitur" class="btn-secondary">◈ Lihat Fitur</a>
+    </div>
+  </div>
+  <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span class="marquee-item">Financial Monitor<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Inventory System<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">CRM & Leads Engine<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Partner Trust Network<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Supply Chain Command<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Auto HPP & Invoice<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Event Radar<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Telegram Automation<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Financial Monitor<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Inventory System<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">CRM & Leads Engine<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Partner Trust Network<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Supply Chain Command<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Auto HPP & Invoice<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Event Radar<span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Telegram Automation<span class="marquee-dot">◆</span></span>
+  </div>
+</div>
+
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item reveal"><span class="stat-num">9</span><span class="stat-label">Modul Terintegrasi</span></div>
+    <div class="stat-item reveal"><span class="stat-num">4</span><span class="stat-label">Tier Partner Network</span></div>
+    <div class="stat-item reveal"><span class="stat-num">3</span><span class="stat-label">Zone Distribusi</span></div>
+    <div class="stat-item reveal"><span class="stat-num">100%</span><span class="stat-label">Berbasis Terminal</span></div>
+  </div>
+</div>
+
+<section class="section" id="fitur">
+  <div class="sec-label">◈ Modul Sistem</div>
+  <h2 class="sec-title">9 Modul <span>Terintegrasi</span></h2>
+  <p class="sec-desc">Setiap modul dirancang untuk kebutuhan spesifik bisnis UMKM — dari pencatatan keuangan hingga jaringan distribusi nasional.</p>
+  <div class="features-grid">
+    <div class="feature-card reveal"><span class="feature-num">01</span><span class="feature-icon">💰</span><div class="feature-name">Financial Monitor</div><p class="feature-desc">Kelola modal, lacak profit real-time, catat transaksi masuk-keluar, dan pantau kesehatan kas bisnis Anda.</p><div class="feature-tags"><span class="ftag">Cash Flow</span><span class="ftag">Profit Tracker</span><span class="ftag">Ledger</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">02</span><span class="feature-icon">📦</span><div class="feature-name">Triple-Stock Inventory</div><p class="feature-desc">Manajemen stok 3 lapisan — bahan baku, produksi, dan produk ready — dengan alert minimum otomatis.</p><div class="feature-tags"><span class="ftag">Multi-Layer</span><span class="ftag">Stock Alert</span><span class="ftag">HPP Auto</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">03</span><span class="feature-icon">🎯</span><div class="feature-name">Hunter & Leads Engine</div><p class="feature-desc">Database CRM untuk mengelola prospek, leads, dan pelanggan aktif dengan sistem status dan follow-up reminder.</p><div class="feature-tags"><span class="ftag">CRM</span><span class="ftag">Leads DB</span><span class="ftag">Follow Up</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">04</span><span class="feature-icon">📡</span><div class="feature-name">Event Radar</div><p class="feature-desc">Pantau dan jadwalkan event penting dengan countdown dan status tracking otomatis.</p><div class="feature-tags"><span class="ftag">Event Tracker</span><span class="ftag">Countdown</span><span class="ftag">Schedule</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">05</span><span class="feature-icon">🧾</span><div class="feature-name">Auto HPP & Invoice</div><p class="feature-desc">Kalkulasi harga jual otomatis berdasarkan HPP dan margin target. Cetak invoice profesional dalam hitungan detik.</p><div class="feature-tags"><span class="ftag">Auto Calc</span><span class="ftag">Invoice</span><span class="ftag">Margin</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">06</span><span class="feature-icon">📱</span><div class="feature-name">Telegram Automation</div><p class="feature-desc">Kirim laporan harian, notifikasi stok, dan alert bisnis otomatis via Telegram Bot ke tim Anda.</p><div class="feature-tags"><span class="ftag">Bot API</span><span class="ftag">Auto Report</span><span class="ftag">Alert</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">07</span><span class="feature-icon">🏛️</span><div class="feature-name">Partner Trust Ecosystem</div><p class="feature-desc">Kelola jaringan mitra dengan Trust Score, tier Bronze-Platinum, territory lock, dan MOU tracker digital.</p><div class="feature-tags"><span class="ftag">Trust Score</span><span class="ftag">Tier System</span><span class="ftag">Territory</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">08</span><span class="feature-icon">⚙️</span><div class="feature-name">Supply Chain Command</div><p class="feature-desc">Monitor produksi dari hulu ke hilir — production order, QC tracking, pengiriman, dan cashflow projection 90 hari.</p><div class="feature-tags"><span class="ftag">Production</span><span class="ftag">QC Track</span><span class="ftag">Cashflow</span></div></div>
+    <div class="feature-card reveal"><span class="feature-num">09</span><span class="feature-icon">💎</span><div class="feature-name">Price Tier Manager</div><p class="feature-desc">Atur harga jual multi-tier secara dinamis — grosir, retail, marketplace — dengan simulasi kalkulasi order.</p><div class="feature-tags"><span class="ftag">Multi-Tier</span><span class="ftag">Simulasi</span><span class="ftag">Dynamic</span></div></div>
+  </div>
+</section>
+
+<div class="how-section" id="cara">
+  <div class="how-inner">
+    <div class="sec-label">◈ Cara Kerja</div>
+    <h2 class="sec-title">Dari <span>Setup ke Profit</span></h2>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-num">I</div><div class="step-title">Install</div><p class="step-desc">Setup ALBA di Termux atau server dalam hitungan menit</p></div>
+      <div class="step reveal"><div class="step-num">II</div><div class="step-title">Input Data</div><p class="step-desc">Masukkan modal, stok, customer, partner — sekali setup langsung jalan</p></div>
+      <div class="step reveal"><div class="step-num">III</div><div class="step-title">Monitor</div><p class="step-desc">Dashboard real-time semua KPI bisnis dalam satu layar</p></div>
+      <div class="step reveal"><div class="step-num">IV</div><div class="step-title">Otomasi</div><p class="step-desc">Laporan, invoice, notifikasi berjalan otomatis tanpa manual</p></div>
+      <div class="step reveal"><div class="step-num">V</div><div class="step-title">Scale Up</div><p class="step-desc">Ekspansi jaringan partner ke seluruh Indonesia</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="klien">
+  <div class="sec-label">◈ Cocok Untuk</div>
+  <h2 class="sec-title">Siapa yang <span>Pakai ALBA?</span></h2>
+  <p class="sec-desc">ALBA dirancang fleksibel untuk berbagai jenis bisnis UMKM yang ingin naik kelas dengan sistem manajemen profesional.</p>
+  <div class="clients-grid">
+    <div class="client-card reveal"><span class="client-icon">🧸</span><div class="client-type">Craft & Souvenir</div><p class="client-desc">Bisnis boneka, souvenir, hampers yang butuh manajemen stok & distribusi terstruktur.</p></div>
+    <div class="client-card reveal"><span class="client-icon">🌸</span><div class="client-type">Florist & Wedding</div><p class="client-desc">Florist, WO, MUA yang perlu kelola event, leads, dan invoice dalam satu sistem.</p></div>
+    <div class="client-card reveal"><span class="client-icon">🏪</span><div class="client-type">Toko & Retail</div><p class="client-desc">Toko kado dan retail yang ingin otomasi pencatatan keuangan dan manajemen stok.</p></div>
+    <div class="client-card reveal"><span class="client-icon">🚚</span><div class="client-type">Distributor UMKM</div><p class="client-desc">Distributor yang butuh kelola jaringan reseller, territory, dan supply chain hulu-hilir.</p></div>
+    <div class="client-card reveal"><span class="client-icon">🎓</span><div class="client-type">Event Organizer</div><p class="client-desc">EO wisuda dan pameran yang perlu jadwal, leads, dan invoice dalam satu platform.</p></div>
+    <div class="client-card reveal"><span class="client-icon">🏭</span><div class="client-type">Home Industry</div><p class="client-desc">Produsen rumahan yang ingin naik kelas dengan sistem produksi dan distribusi terorganisir.</p></div>
+  </div>
+</section>
+
+<div class="cta-section" id="kontak">
+  <div style="position:relative;z-index:1">
+    <div class="sec-label" style="justify-content:center;display:flex">◈ Mulai Sekarang</div>
+    <h2 class="cta-title">Siap <span>Otomasi Bisnis</span> Anda?</h2>
+    <p class="cta-desc">Konsultasi gratis dengan tim ALBA. Kami bantu setup sistem manajemen bisnis yang sesuai kebutuhan Anda.</p>
+    <a href="https://wa.me/6285XXXXXXXXX?text=Halo ALBA! Saya ingin konsultasi sistem manajemen bisnis." class="wa-btn" target="_blank">💬 Konsultasi Gratis via WhatsApp</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo-text">ALBA</div>
+  <div class="footer-sub">Business Management & Automation System · Bogor, Indonesia</div>
+  <div class="footer-links">
+    <a href="#fitur">Fitur</a>
+    <a href="#cara">Cara Kerja</a>
+    <a href="#klien">Klien</a>
+    <a href="https://github.com/albachry/alba-dashboard" target="_blank">GitHub</a>
+  </div>
+  <p class="footer-copy">© 2026 ALBA Business Engine · All Rights Reserved · Made with ◈ in Bogor</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*100);obs.unobserve(e.target)}
+  });
+},{threshold:.1});
+reveals.forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.background=window.scrollY>50?'rgba(5,5,5,0.98)':'rgba(5,5,5,0.92)';
+});
+</script>
+</body>
+</html>
 .wa-btn:hover{transform:translateY(-3px);box-shadow:0 0 60px rgba(37,211,102,.35)}
 
 footer{padding:3rem 2rem;border-top:1px solid rgba(245,200,66,.07);text-align:center;background:var(--black)}
